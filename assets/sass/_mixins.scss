@@ -1,5 +1,6 @@
+
 @mixin background-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
-	background: $normal;
+        background:$normal;
 	@if $visited {
 		&:visited {
 			background: $visited; } }
@@ -17,10 +18,10 @@
 @mixin v-pixel-fallback ( $property, $rems, $keyword: null, $vertical-radius: false, $important: false ) {
 
 	@if $important {
-		$important : ' !important';
+		$important : " !important";
 	}
 	@else {
-		$important : '';
+		$important : "";
 	}
 
 	@if $property == 'border-radius' {
@@ -112,4 +113,157 @@
 		@return $number / ($number * 0 + 1);
 	}
 
+}
+@mixin hidden()
+{
+	display:none !important;
+	visibility:hidden !important;
+}
+
+@mixin visible()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+
+@mixin hidden-undo()
+{
+	display:block !important;
+	visibility:visible !important;
+}
+
+@mixin  ac-hiddenVisually()
+{
+	border:0 !important;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px !important;
+	padding:0 !important;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px !important;
+}
+
+@mixin ac-hiddenVisually-focus()
+{
+	clip:auto;
+	height:auto !important;
+	overflow:visible;
+	position:static !important;
+	width:auto !important;
+}
+
+
+
+// Set all the colors for a link with one mixin call.
+// Order of arguments is:
+//
+// 1. normal
+// 2. hover
+// 3. active
+// 4. visited
+// 5. focus
+//
+// Those states not specified will inherit.
+// Mixin to an anchor link like so:
+//     a
+//       +link-colors(#00c, #0cc, #c0c, #ccc, #cc0)
+
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false, $important: null) {
+
+	@if $important {
+		$important : !important;
+	}
+
+	color: $normal $important;
+	@if $visited {
+		&:visited {
+			color: $visited $important; } }
+	@if $focus {
+		&:focus {
+			color: $focus $important; } }
+	@if $hover {
+		&:hover {
+			color: $hover $important; } }
+	@if $active {
+		&:active {
+			color: $active $important; } } }
+
+
+
+//  Helper function to replace characters in a string
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+	@return if($index,
+			str-slice($string, 1, $index - 1) + $replace +
+        str-replace(str-slice($string, $index +
+        str-length($search)), $search, $replace),
+			$string);
+}
+
+//
+//  Function to create an optimized svg url
+//  Version: 1.0.6
+//  http://codepen.io/jakob-e/pen/doMoML
+@function svg-url($svg){
+	//
+	//  Add missing namespace
+	//
+	@if not str-index($svg,xmlns) {
+		$svg: str-replace($svg, '<svg','<svg xmlns="http://www.w3.org/2000/svg"');
+	}
+	//
+	//  Chunk up string in order to avoid
+	//  "stack level too deep" error
+	//
+	$encoded:'';
+	$slice: 2000;
+	$index: 0;
+	$loops: ceil(str-length($svg)/$slice);
+	@for $i from 1 through $loops {
+		$chunk: str-slice($svg, $index, $index + $slice - 1);
+		//
+		//   Encode
+		//
+		$chunk: str-replace($chunk, '"', '\'');
+
+		$chunk: str-replace($chunk, '%22', "\'");
+
+		$chunk: str-replace($chunk, '%', '%25');
+		$chunk: str-replace($chunk, '#', '%23');
+		$chunk: str-replace($chunk, '{', '%7B');
+		$chunk: str-replace($chunk, '}', '%7D');
+		$chunk: str-replace($chunk, '<', '%3C');
+		$chunk: str-replace($chunk, '>', '%3E');
+
+		//
+		//    The maybe list
+		//
+		//    Keep size and compile time down
+		//    ... only add on documented fail
+		//
+		//  $chunk: str-replace($chunk, '&', '%26');
+		//  $chunk: str-replace($chunk, '|', '%7C');
+		//  $chunk: str-replace($chunk, '[', '%5B');
+		//  $chunk: str-replace($chunk, ']', '%5D');
+		//  $chunk: str-replace($chunk, '^', '%5E');
+		//  $chunk: str-replace($chunk, '`', '%60');
+		//  $chunk: str-replace($chunk, ';', '%3B');
+		//  $chunk: str-replace($chunk, '?', '%3F');
+		//  $chunk: str-replace($chunk, ':', '%3A');
+		//  $chunk: str-replace($chunk, '@', '%40');
+		//  $chunk: str-replace($chunk, '=', '%3D');
+
+		$encoded: #{$encoded}#{$chunk};
+		$index: $index + $slice;
+	}
+	@return url("data:image/svg+xml,#{$encoded}");
+}
+
+//  Background svg mixin
+@mixin backgroundSVG($svg, $params){
+	background: svg-url($svg) $params;
+}
+
+@mixin backgroundImageSVG($svg){
+	background-image: svg-url($svg);
 }
