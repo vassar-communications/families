@@ -1,0 +1,274 @@
+/*	CONFIG ====== */ 
+
+/*	TYPOGRAPHY
+	========== */
+
+$iconFont: "icons" !important;
+
+
+$serif: "freight-text-pro", "Georgia";
+$sans-serif: "brandon-grotesque", "Helvetica";
+$fontWeightNormal: 400;
+$fontWeightBold: 700;
+$fontWeightBoldSans: 500;
+
+/*	LAYOUT
+	====== */
+
+/* Site breakpoints */
+
+$tiny: 25em; /* 400px divided by 16px */
+$small: 65.625em; /* 600px divided by 16px */
+$medium: 65.625em; /* 800px divided by 16px */
+$large: 65.625em; /* 1000px divided by 16px */
+
+/* The padding on u-lHeader, u-lMain, u-lFooter, and u-NavSite. */
+
+$layoutContainerPadding--tiny: 4%;
+$layoutContainerPadding--medium: 3%;
+
+/* COLOR
+	====== */
+
+$violet: #380C2A;
+$dkGrey: #423d3e;
+$medGrey: #746661;
+$pink: #CC2249;
+$orange: #FF4D38;
+$yellow: #FEE293;
+$green: #37C78F;
+
+
+/* Basic link colors - these colors also affect the Google Search result link colors */
+
+$linkColor: #cc2249;
+$linkColorHoverFocus: #bfb8b9;
+$linkColorVisited: #380c2a;
+$linkColorActive: #FEE293; 
+$linkBorderColor: #380c2a; 
+$fontColor: #423d3e;
+
+$html--backgroundColor: #fff;
+$body--backgroundColor: #fff;
+$u-lHeader--backgroundColor: $medGrey;
+$u-lFooter--backgroundColor: $dkGrey;
+
+/* MODULES
+	======== */
+
+/* Bios */
+
+$u-BioList__name--font: 1.2em $sans-serif;
+$u-BioList__title--font: 100% $sans-serif ;
+$u-Bio__title--font: $fontWeightBold 100% $sans-serif;
+$u-Bio__contactItemLabel--font: $fontWeightBold .85em $sans-serif ;
+$u-Bio__contactData--font: .9em $sans-serif ;
+$u-Bio__contactItem--marginBottom: .1em;
+
+$u-Bio__title--color: inherit;
+$u-Bio__contactItemLabel--color: inherit;
+$u-Bio__contactData--color: inherit;
+
+/* Breadcrumbs  */
+
+$u-BreadCrumbs__item--font: .9em $sans-serif;
+
+$u-BreadCrumbs__item--dividerColor: #ccc;
+
+$u-BreadCrumbs__item--linkColor: $linkColor;
+$u-BreadCrumbs__item--linkColorHoverFocus: $linkColorHoverFocus;
+$u-BreadCrumbs__item--linkColorVisited: $linkColorVisited;
+$u-BreadCrumbs__item--linkColorActive: $linkColorActive;
+
+/* Footer */
+
+$u-VCard__site--font: $fontWeightNormal 1em/1.2 $sans-serif;
+$u-VCard__site--labelFont: $fontWeightNormal 1em/1.2 $sans-serif;
+
+$u-VCard__site--color: inherit;
+$u-VCard__site--labelColor: inherit;
+
+$u-VCard__site--linkColor: #fff;
+$u-VCard__site--linkColorHoverFocus: $linkColorHoverFocus;
+$u-VCard__site--linkColorVisited: #fff;
+$u-VCard__site--linkColorActive: $linkColorActive;
+
+$u-VCard__site--border: none;
+
+/* Images */
+
+$u-Figure__caption--font: $fontWeightNormal .9em $sans-serif;
+
+$u-Figure__caption--linkColor: $linkColor;
+$u-Figure__caption--linkColorHoverFocus: $linkColorHoverFocus;
+$u-Figure__caption--linkColorVisited: $linkColorVisited;
+$u-Figure__caption--linkColorActive: $linkColorActive;
+
+$figureMargin: 1.25em;
+
+/*	Google search results  */
+
+$gsSearchTermHighlighted: $fontColor;	/* Currently being overridden by something in Google's default CSS */
+
+$gsSearchResultTitle: $fontWeightNormal 1.4em/1.1 $sans-serif;
+$gs-visibleUrl-long--font: $fontWeightNormal 9em $sans-serif !important;
+$gs-visibleUrl-long--color: $linkColorVisited !important;
+	
+/* The numbers that represent pages of search results */
+$gsPaginationNumberBorderColor: #eee;
+$gsPaginationCurrentLinkBorder: #ccc;
+$gsPaginationCurrentLinkBackground: #eee;
+$gsPaginationHoverLinkBorder: #ccc;
+$gsPaginationHoverLinkBackground: #ddd;
+
+/* Nav */
+$u-NavSite__level--1--mobileFont: $fontWeightBoldSans 1.95em/1.1 $sans-serif;
+$u-NavSite__level--2--mobileFont: $fontWeightNormal 1.4em/1.1 $sans-serif;
+$u-NavSite__level--3--mobileFont: $fontWeightNormal 1em/1.1 $sans-serif;
+$u-NavSite__item--mobilePadding: .25em 0;
+
+$u-NavSite__level--1--font: $fontWeightNormal 1em/1.1 $sans-serif;
+$u-NavSite__level--2--font: $fontWeightNormal 1em/1.1 $sans-serif;
+$u-NavSite__level--3--font: $fontWeightNormal 1em/1.1 $sans-serif;
+/* level 3 covers Level 3 and up. */
+
+$u-NavSite__level--borderColor: none;
+
+$mobileMenuBackground: $fontColor;
+
+$mobileMenuLinkColor: #fff;
+$mobileMenuLinkColorHoverFocus: $linkColorHoverFocus;
+$mobileMenuLinkColorActive: $yellow;
+$mobileMenuLinkColorVisited: #fff;
+
+$menuLinkColor: #fff;
+$menuLinkColorHoverFocus: $linkColorHoverFocus;
+$menuLinkColorActive: $linkColorActive;
+$menuLinkColorVisited: #fff;
+
+/* LATEST Modules basic */
+
+$sidebarModule__header--font: $fontWeightNormal inherit/1.1 $sans-serif;
+$sidebarModule--nameFont: $fontWeightNormal inherit/1.1 $sans-serif;
+
+$sidebarModule--font: $fontWeightNormal inherit $sans-serif; /* that shorthand left in for backwards compatibility */
+$sidebarModule--font-weight: inherit;
+$sidebarModule--font-family: inherit;
+
+$sidebarModule--labelFont: $fontWeightBold;
+$sidebarModule--margin: 0 0 1.5em;
+
+/* Use these variables to place a bg color on side news announcement items */
+
+$sidebarModuleAnnouncements__link--background: transparent;
+$sidebarModuleAnnouncements__link--padding: 0;
+$sidebarModule__listItem--border: 1px solid #eee;
+
+$sidebarModule__header--linkColor: $fontColor;
+$sidebarModule__header--linkColorHoverFocus: $linkColorHoverFocus;
+$sidebarModule__header--linkColorActive: $linkColorActive;
+$sidebarModule__header--linkColorVisited: $fontColor;
+
+/* News  */
+
+$u-ArticleListItem__title--font: $fontWeightBoldSans 1.2em/1.1 $sans-serif;
+$u-ArticleListItem__title--linkColor: $linkColor;
+$u-ArticleListItem__title--linkColorHoverFocus: $linkColorHoverFocus;
+$u-ArticleListItem__title--linkColorActive: $linkColorActive;
+$u-ArticleListItem__title--linkColorVisited: $linkColorVisited;
+$u-ArticleListItem__summary--font: $fontWeightNormal 1em $serif;
+$u-ArticleListItem__label--type--font: $fontWeightNormal .85em $sans-serif;
+$u-ArticleListItem__label--dateline__posted--font: $fontWeightNormal .85em $sans-serif;
+$u-ArticleListItem__label--dateline__postedDate--font: $fontWeightNormal .85em $sans-serif;
+
+$u-ArticleListItem__link--linkColor: $linkColor;
+$u-ArticleListItem__link--linkColorHoverFocus: $linkColorHoverFocus;
+$u-ArticleListItem__link--linkColorActive: $linkColorActive;
+$u-ArticleListItem__link--linkColorVisited: $linkColorVisited;
+
+$u-ArticleListItem__summary--color: $fontColor;
+$u-ArticleListItem__summary--colorHoverFocus: $fontColor;
+$u-ArticleListItem__summary--colorActive: $fontColor;
+$u-ArticleListItem__summary--colorVisited: $fontColor;
+
+/* Not sure all these color settings are necessary
+$u-ArticleListItem__label--type--color:;
+$u-ArticleListItem__label--dateline__posted--color:;
+$u-ArticleListItem__label--dateline__postedDate--color:f; */
+
+/* LATEST Moved to Module Basic above
+$u-NewsList__itemContainer--margin: 1em 0;
+$u-NewsList__item--background: transparent;
+$u-NewsList__item--padding: 0; */
+
+$buttonBgColor: #ccc;
+$buttonBgColorHoverFocus: #999;
+$buttonBgColorVisited: #ccc;
+$buttonBgColorActive: #666;
+
+$buttonLinkColor: #333;
+$buttonLinkColorHoverFocus: #fff;
+$buttonLinkColorVisited: #333;
+$buttonLinkColorActive: #ccc;
+
+$uniqueButtonBgColor: #666;
+$uniqueButtonBgColorHoverFocus: #999;
+$uniqueButtonBgColorVisited: #666;
+$uniqueButtonBgColorActive: #333;
+
+$uniqueButtonLinkColor: #fff;
+$uniqueButtonLinkColorHoverFocus: #666;
+$uniqueButtonLinkColorVisited: #fff;
+$uniqueButtonLinkColorActive: #ccc;
+
+$u-ArticleList__systemMessage--font: $fontWeightNormal 1.1em/1.2 $serif;
+$u-ArticleList__systemMessage--color: #400;
+
+/*	Search
+	------ */
+
+/*	Mobile search colors
+	-------------------- */
+
+$u-Search__submit--mobileIconColor: $pink;
+$u-Search__submit--mobileIconColorHoverFocus: $orange;
+$u-Search__submit--mobileIconColorActivated: $yellow;
+
+$u-Search__submit--iconColor: $pink;
+$u-Search__submit--iconColorHoverFocus: $orange;
+$u-Search__submit--iconColorActivated: $dkGrey;
+
+$u-Search__submit--mobileBgColor: $dkGrey;
+$u-Search__submit--bgColor: transparent;
+$u-Search__submit--bgColorHoverFocus: transparent; 
+$u-Search__submit--bgColorActive: transparent;
+
+$u-Search__field--mobileBgColor: #fff;
+$u-Search__field--bgColor: transparent;
+$mobileSearchBackgroundColor: #fff;
+$searchBackgroundColor: #fff;
+
+$u-Search__field--font: $fontWeightNormal 1em $sans-serif;
+$u-Search__field--textColor: $fontColor;
+$u-Search__field--placeholderColor: $fontColor;
+
+$u-Search--borderSize: border-bottom;
+$u-Search--borderSettings: none;
+
+$pointAtWhichSearchMovesToRight: 0px;
+
+/*	Mobile search and menu colors
+	----------------------------- */
+$u-Masthead__vassar--mobileLinkColor: #fff;
+$u-Masthead__vassar--mobileLinkColorHoverFocus: $linkColorHoverFocus;
+$u-Masthead__vassar--mobileLinkColorActive: $yellow;
+
+$u-Masthead__vassar--linkColor: #fff;
+$u-Masthead__vassar--linkColorHoverFocus: $linkColorHoverFocus;
+$u-Masthead__vassar--linkColorActive: $violet;
+
+$ac-NavAnchor--menuColor: $pink;
+$ac-NavAnchor--menuColorHoverFocus: $orange;
+$ac-NavAnchor--menuColorActive: $yellow;
+
+$searchAndMenuBtnColor: #fff; /* Sets link color for mobile nav close button, that's it */
