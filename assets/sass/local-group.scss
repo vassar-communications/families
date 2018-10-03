@@ -58,7 +58,7 @@ td {
 
 }
 .u-lContent {
-	@include v-pixel-fallback ('font-size', 1.5rem);
+	@include v-pixel-fallback ('font-size', 1.4rem);
 	font-family: $serif;
 	font-weight: $fontWeightNormal;
 	line-height: 1.45;
@@ -397,6 +397,7 @@ h4.departmenttitle {
 	}
     .u-lMain {
         margin: 7% auto;
+		max-width: 63em;
     }
     .u-lAside {
         width: 94%;
@@ -534,6 +535,9 @@ h4.departmenttitle {
         float: none;
         width: 100%;
     }
+	.u-Figure--half {
+    	width: 100%;
+	}	
 }
 @media all and (min-width: 25em) {
 	.u-lHeader .u-Masthead__vassar {
@@ -564,6 +568,9 @@ h4.departmenttitle {
         float: left;
         width: 30.83%;
     }
+	.u-Figure--half {
+    	width: 47.25%;
+	}
 }
 @media all and (min-width: $small) {
     html {
