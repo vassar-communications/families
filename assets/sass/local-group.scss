@@ -1510,3 +1510,21 @@ h3+.faq__item:after {
 body {
     position: relative;
 }
+   
+/*New styles added by Susan Brkich for homepage special coronavirus link placement */
+
+@media screen {
+	#homepageLink h3 {
+		margin-top: 0;
+	}
+	#homepageLink {
+		margin-bottom: 7%;
+	}	
+}
+
+
+@media all and (min-width: $small) {
+	#homepageLink h3 {
+		margin-top: 0;
+	}
+}
