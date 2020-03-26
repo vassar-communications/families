@@ -1511,20 +1511,13 @@ body {
     position: relative;
 }
    
-/*New styles added by Susan Brkich for homepage special coronavirus link placement */
-
-@media screen {
-	#homepageLink h3 {
-		margin-top: 0;
-	}
-	#homepageLink {
-		margin-bottom: 7%;
-	}	
+/*Begin Susan Brkich new style for background box for special boxed content, e.g.families Give page*/
+.background {
+	background-color: #f0eeea;
+	padding: 5%;
+	border: 2px #c1c1c1 solid;
+	margin-bottom: 2.5em;
 }
+.background .h3 {margin-top: .5em;}
 
-
-@media all and (min-width: $small) {
-	#homepageLink h3 {
-		margin-top: 0;
-	}
-}
+/*End Susan Brkich new style for background box for special boxed content, e.g.families Give page*/
