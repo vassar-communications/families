@@ -5,9 +5,8 @@
 
 $iconFont: "icons" !important;
 
-
-$serif: "source-sans-pro";
-$sans-serif: "brandon-grotesque", "Helvetica";
+$serif: source-sans-pro, sans-serif;
+$sans-serif: covik-sans, sans-serif;
 $fontWeightNormal: 300;
 $fontWeightBold: 700;
 $fontWeightBoldSans: 500;
@@ -30,27 +29,27 @@ $layoutContainerPadding--medium: 3%;
 /* COLOR
 	====== */
 
-$violet: #380C2A;
-$dkGrey: #423d3e;
-$medGrey: #746661;
-$pink: #CC2249;
-$orange: #FF4D38;
-$yellow: #FEE293;
+$violet: #641A2B;
+$dkGrey: #63666A;
+$medGrey: #BFB9B0;
+$pink: #ED1C24;
+$orange: #C6AA76;
+$yellow: #C6AA76;
 $green: #37C78F;
 
 
 /* Basic link colors - these colors also affect the Google Search result link colors */
 
-$linkColor: #cc2249;
-$linkColorHoverFocus: #bfb8b9;
-$linkColorVisited: #380c2a;
-$linkColorActive: #FEE293; 
-$linkBorderColor: #380c2a; 
-$fontColor: #423d3e;
+$linkColor: #951829;
+$linkColorHoverFocus: #D0D0CE;
+$linkColorVisited: #63666A;
+$linkColorActive: #ED1C24;
+$linkBorderColor: #951829;
+$fontColor: #63666A;
 
 $html--backgroundColor: #fff;
 $body--backgroundColor: #fff;
-$u-lHeader--backgroundColor: $medGrey;
+$u-lHeader--backgroundColor: $dkGrey;
 $u-lFooter--backgroundColor: $dkGrey;
 
 /* MODULES

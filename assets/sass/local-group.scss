@@ -58,10 +58,10 @@ td {
 
 }
 .u-lContent {
-	@include v-pixel-fallback ('font-size', 1.4rem);
+	@include v-pixel-fallback ('font-size', 1.2rem);
 	font-family: $serif;
 	font-weight: $fontWeightNormal;
-	line-height: 1.45;
+	line-height: 1.4;
 	margin-bottom: 1.25em;
 }
 p {
@@ -396,7 +396,7 @@ h4.departmenttitle {
 		margin: -4.25em 0 4em;
 	}
     .u-lMain {
-        margin: 7% auto;
+        margin: 7% auto 2%;
 		max-width: 63em;
     }
     .u-lAside {
@@ -614,7 +614,7 @@ h4.departmenttitle {
         float: none;
         overflow: hidden;
         padding: 0;
-        margin: 9.5% auto;
+        margin: 9.5% auto 2%;
     }
     .u-lContent {
         width: 100%;
@@ -715,10 +715,10 @@ a.fn.org.url.u-VCard__fn.u-VCard__item.u-VCard__org.u-VCard__url:link,
 }
 .u-Masthead,
 .galleria--homepage {
-    border-bottom: .25em solid $pink;
+    border-bottom: .25em solid $violet;
 }
 .u-pageTitle {
-    border-bottom: .01em solid $pink;
+    border-bottom: .01em solid $violet;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     @include link-colors($fontColor, $linkColorHoverFocus, $linkColorActive, $fontColor, $linkColorHoverFocus);
@@ -729,10 +729,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 #search:target {
     background-color: $dkGrey;
-}
-.u-Masthead,
-.galleria--homepage {
-    border-bottom: .25em solid $pink;
 }
 .u-Masthead__vassar {
     background-color: transparent;
@@ -855,8 +851,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     @include link-colors(#fff, $linkColorHoverFocus, $linkColorActive, #fff, $linkColorHoverFocus);
 }
 .u-ExtendedFooter__listGroup {
-    border-top: 1px solid $pink;
-    border-bottom: 1px solid $pink;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 h2 a.u-footMasthead__vassar--link,
 .u-VCard__org.u-VCard__url {
@@ -899,18 +895,18 @@ tbody tr:nth-child(odd) {
         color: tint($fontColor, 60%);
     }
     .u-NavSite__level--2 {
-        background-color: #cc2249;
+        background-color: $violet;
         .u-NavSite__item {
             background-color: transparent;
         }
     }
     .u-NavSite__item {
-        background-color: $medGrey;
+        background-color: $dkGrey;
     }
     .u-NavSite__level--1 > {
         .u-NavSite__item--isOpen > .u-NavSite__item,
         .u-NavSite__item--isCurrent {
-            background-color: $pink;
+            background-color: $violet;
         }
     }
     .u-NavSite__level--2 .u-NavSite__item--isOpen .u-NavSite__item,
@@ -931,7 +927,7 @@ tbody tr:nth-child(odd) {
 }
 /* modules */
 .u-lContent .Module__header {
-    font: $fontWeightBoldSans .9em/1.1 $sans-serif;
+    font: $fontWeightBold .9em/1.1 $sans-serif;
     text-transform: uppercase;
     letter-spacing: .02em;
     margin-bottom: 2em;
@@ -1521,3 +1517,63 @@ body {
 .background .h3 {margin-top: .5em;}
 
 /*End Susan Brkich new style for background box for special boxed content, e.g.families Give page*/
+
+/*  COVID banner */
+@media (min-width: 54.375em) {
+    /* 
+    body {
+        margin-top: 0;
+    }
+	.BannerCOVID19 + div {
+	    margin-top: 4em;
+	}
+    */
+    .BannerCOVID19
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+.first-section .background {
+    background-color: #f0eeea;
+    padding: 5%;
+    border: 1px #c1c1c1 solid;
+    margin-bottom: 2.5em;
+}
+.list--homePage--listPublications .Module__list {
+
+    display: flex;
+}
+.list--homePage--listPublications .Module__list {
+    list-style-type: none;
+    justify-content: space-between;
+}
+.list--homePage--listPublications .Module__desc {
+    font-size: 1.25rem;
+}
+.list--homePage--listPublications .Module__link:link {
+    border: 0px solid transparent;
+}
+@media (min-width: 54.375em) {
+    .list--homePage--listPublications .Module__list {
+        flex-wrap: nowrap;
+    }
+    .list--homePage--listPublications .Module__listItem {
+        width: 30%;
+        float: none;
+    }
+    .list--homePage--listPublications .Module__listItem:nth-child(2) {
+        margin: 0;
+    }
+}
+.u-Masthead__vassar--link svg,
+.u-footMasthead__vassar--link svg {
+    display: block;
+    margin-top: 0.125em;
+    width: 4em;
+}
+a.u-VCard__item--contact:link {
+    color: #fff;
+}
