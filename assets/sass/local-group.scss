@@ -880,7 +880,7 @@ tbody tr:nth-child(odd) {
         border: none;
     }
     .u-Search {
-        border-bottom: 1px solid $pink;
+        border-bottom: 1px solid $violet;
     }
     input[type="search"]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         color: tint($fontColor, 60%);
@@ -912,13 +912,13 @@ tbody tr:nth-child(odd) {
     .u-NavSite__level--2 .u-NavSite__item--isOpen .u-NavSite__item,
     .u-NavSite__item--isOpen .u-NavSite__level--2 .u-NavSite__item--isCurrent {
          background-color: #fff;
-         color: $pink;
+         color: $violet;
     }
     .u-NavSite__level--2 .u-NavSite__item--isOpen,
     .u-NavSite__item--isOpen .u-NavSite__level--2 {
         .u-NavSite__item--isCurrent {
             background-color: #fff;
-            color: $pink;
+            color: $violet;
         }
     }
     .u-NavSite__level--3 .u-NavSite__item {
@@ -1271,8 +1271,8 @@ tbody tr:nth-child(odd) {
 .list--homePage--listInTheMedia,
 .list--homePage--listPublications {
     .Module__header {
-        color: $pink;
-        border-bottom: .01em solid $pink;
+        color: $violet;
+        border-bottom: .01em solid $violet;
     }
 }
 .list--homePage--listInTheMedia {
